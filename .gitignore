@@ -2,3 +2,4 @@ freedman2006.pdf
 *.pk
 *.pkl
 *.pickle
+__pycache__/
