@@ -35,9 +35,3 @@ def randomize(Z, YC, YT, frac_treated=0.75, rng=None):
     X[rng.choice(n, size=nT, replace=False)] = 1
     Y = X * YT + (1 - X) * YC
     return X, Y, Z
-
-
-def true_delta(YC, YT):
-    """Differential log odds computed from the potential responses."""
-    aT, aC = YT.mean(), YC.mean()
-    return np.log(aT / (1 - aT)) - np.log(aC / (1 - aC))
